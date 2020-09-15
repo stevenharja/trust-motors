@@ -1,0 +1,17 @@
+.header {
+  background-color: $color-primary-dark;
+  padding: 2rem 7rem;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  justify-content: center;
+  @include respond(phone) {
+    padding: 2rem 5rem;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    justify-items: center;
+  }
+  &__logo {
+    width: 10rem;
+  }
+}

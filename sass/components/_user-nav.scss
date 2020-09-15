@@ -1,0 +1,23 @@
+.user-nav {
+  justify-self: right;
+  @include respond(phone) {
+    visibility: hidden;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 2rem;
+      margin: 0 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-silver;
+      border-bottom: 2px solid $color-silver;
+    }
+
+    &:hover {
+      color: $color-primary-gold;
+      border-bottom: 2px solid $color-primary-gold;
+    }
+  }
+}

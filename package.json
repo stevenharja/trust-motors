@@ -1,0 +1,14 @@
+{
+  "name": "trust-motors",
+  "version": "1.0.0",
+  "description": "Website for all your vehicles needs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Steven Harjapramana",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

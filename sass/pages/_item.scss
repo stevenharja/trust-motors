@@ -1,0 +1,146 @@
+.item-container {
+  display: grid;
+  grid-template-rows: min-content 85vh min-content min-content;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item-hero {
+  padding: 2rem 7rem;
+  grid-column: 1 / -1;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark, 1),
+      rgba($color-primary-light, 0.6) 20%
+    ),
+    url(../img/car-5.jpg);
+  background-size: cover;
+  background-position: center;
+  color: $color-silver;
+  display: grid;
+  align-content: center;
+  row-gap: 2rem;
+  border-bottom: 5px solid $color-primary-gold;
+
+  &__title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__description {
+    font-size: 2rem;
+  }
+
+  &__cta {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 3rem;
+    color: $color-silver;
+    text-transform: uppercase;
+    border: 1px solid $color-silver;
+    justify-self: start;
+  }
+}
+
+.item-description {
+  grid-column: 1 / -1;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr) min-content;
+  }
+
+  &__img {
+    width: 100%;
+
+    &--1 {
+      grid-column: span 2;
+      clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+      @include respond(phone) {
+        grid-column: span 4;
+      }
+    }
+
+    &--2 {
+      grid-column: span 2;
+      clip-path: polygon(0 0, 100% 0%, 70% 100%, 0% 100%);
+      @include respond(phone) {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  &__paragraph {
+    font-size: 2rem;
+    align-self: center;
+    padding: 2rem 7rem;
+    grid-column: span 2;
+    text-align: left;
+    @include respond(between-land-port) {
+      padding: 2rem 5rem;
+      font-size: 1.5rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2rem;
+      grid-column: span 4;
+      text-align: center;
+    }
+  }
+
+  &__cta {
+    padding: 2rem 7rem;
+    grid-column: span 2;
+    text-align: right;
+    margin: auto 0;
+    @include respond(tab-land) {
+      grid-column: span 4;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    font-size: 7rem;
+    font-weight: 300;
+    @include respond(tab-port) {
+      font-size: 5rem;
+    }
+  }
+
+  &__year,
+  &__mileage {
+    font-size: 4.5rem;
+    font-weight: 300;
+    @include respond(tab-port) {
+      font-size: 3.5rem;
+    }
+    @include respond(between-land-port) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__cta-button {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+
+    background-color: $color-primary-gold;
+    color: $color-white;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 2rem;
+    opacity: 0.8;
+    transition: all 0.3s;
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+    @include respond(between-land-port) {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

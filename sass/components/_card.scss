@@ -1,0 +1,39 @@
+.card {
+  display: block;
+  width: 100%;
+
+  &__thumbnail {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    transition: all 0.3s;
+    filter: brightness(0.5);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    text-decoration: none;
+    text-align: center;
+    color: $color-silver;
+    transition: all 0.3s;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &:hover &__img {
+    filter: brightness(0.8);
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -10%);
+  }
+}

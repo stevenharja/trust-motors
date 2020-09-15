@@ -1,0 +1,20 @@
+.hero-nav {
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-silver;
+    font-weight: 700;
+
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        margin-left: 5px;
+        color: $color-silver;
+      }
+    }
+
+    &:hover {
+      color: $color-primary-gold;
+    }
+  }
+}
